@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="One.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196G2" Padding="24" CornerRadius="0">
+            <Label Text="Data Collector 1.0" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+        <Label Text="We need some info about you" FontSize="Title" Padding="30,10,30,10"/>
+        <Entry x:Name="name" Keyboard="Text"
+       Placeholder="Enter your name"
+       VerticalOptions="CenterAndExpand" />
+
+        <Label Text="What's your gender?" />
+
+        <RadioButton x:Name="male" GroupName="gender" Content="Male" />
+        <RadioButton x:Name="female" GroupName="gender" Content="Female" />
+        <RadioButton x:Name="other" GroupName="gender" Content="Other" />
+
+
+        <Label Text="What's your date of birth?" />
+        <DatePicker Format="D" x:Name="date"
+            VerticalOptions="CenterAndExpand" PropertyChanged="date_PropertyChanged"/>
+
+        <Label x:Name="age" Text="Age: Undetermined" />
+
+        <Label x:Name="status" VerticalOptions="Center" HorizontalOptions="Center" />
+
+        <StackLayout Orientation="Horizontal" Margin="30" Padding="20">
+
+            <Button
+        Text="Reset"
+        Font="Medium"
+        BorderWidth="1"
+        HorizontalOptions="Start"
+        VerticalOptions="Center"
+        Clicked="OnResetButtonClicked" />
+
+            <Button
+        Text="Load"
+        Font="Medium"
+        BorderWidth="1"
+        HorizontalOptions="Start"
+        VerticalOptions="CenterAndExpand"
+        Clicked="OnLoadButtonClicked" />
+
+            <Button
+        Text="Save"
+        Font="Medium"
+        BorderWidth="1"
+        HorizontalOptions="End"
+        VerticalOptions="Fill"
+        Clicked="OnSaveButtonClicked" />
+
+
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
