@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Insta_Photos.Input">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196G2" Padding="24" CornerRadius="0">
+                <Label Text="Insta Photos 1.0" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+            <Label Text="Add New Content" FontSize="Title" Padding="30,10,30,10"/>
+
+
+            <ListView x:Name="imageListView" ItemsSource="{Binding PostsContainer}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding title}" Detail="{Binding comments}" ImageSource="{Binding photo}"></ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Picker x:Name="picker" Title="Select photo category"
+        TitleColor="DarkGreen" ItemsSource="{Binding PostsContainer}" ItemDisplayBinding="{Binding title}" SelectedIndexChanged="picker_SelectedIndexChanged"/>
+
+
+            <Entry x:Name="title" Keyboard="Text"
+       Placeholder="Title of the submission"
+       VerticalOptions="CenterAndExpand" TextChanged="title_TextChanged"/>
+            
+            <Entry x:Name="comments" Keyboard="Text"
+       Placeholder="Any comments"
+       VerticalOptions="CenterAndExpand" TextChanged="comments_TextChanged"/>
+
+            <StackLayout Orientation="Horizontal" Margin="30" Padding="20">
+                <Button
+        Text="Save"
+        Font="Medium"
+        BorderWidth="1"
+        HorizontalOptions="End"
+        VerticalOptions="Fill"
+        Clicked="OnSaveButtonClicked" />
+
+                <Button x:Name="deleteButton"
+        Text="Delete"
+        Font="Medium"
+        BorderWidth="1"
+        HorizontalOptions="Start"
+        VerticalOptions="CenterAndExpand"
+        Clicked="OnDeleteButtonClicked"
+        />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

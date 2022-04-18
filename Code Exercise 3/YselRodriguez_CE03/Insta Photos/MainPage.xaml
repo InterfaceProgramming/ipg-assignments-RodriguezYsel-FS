@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Insta_Photos.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196G2" Padding="24" CornerRadius="0">
+            <Label Text="Insta Photos 1.0" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <ListView x:Name="imageListView" ItemsSource="{Binding selectedPost}" ItemTapped="imageList_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ImageCell Text="{Binding title}" Detail="{Binding comments}" ImageSource="{Binding photo}"></ImageCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <StackLayout Orientation="Horizontal" Margin="30" Padding="20">
+            <Button
+        Text="NEW"
+        Font="Medium"
+        BorderWidth="1"
+        HorizontalOptions="Start"
+        VerticalOptions="Center"
+        Clicked="OnNewButtonClicked" />
+
+            <Button x:Name="deleteButton"
+        Text="Delete All"
+        Font="Medium"
+        BorderWidth="1"
+        HorizontalOptions="Start"
+        VerticalOptions="CenterAndExpand"
+        Clicked="OnDeleteButtonClicked"
+        />
+
+        </StackLayout>
+
+
+    </StackLayout>
+
+    
+
+</ContentPage>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MessagingCenter.InputPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#2196G2" Padding="24" CornerRadius="0">
+                <Label Text="Event Manager 1.0" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+            <Entry x:Name="name" Keyboard="Text"
+       Placeholder="Enter your event name"
+       VerticalOptions="CenterAndExpand" />
+
+            <Label Text="Enter the date and time of your event" FontSize="Title" Padding="30,10,30,10"/>
+
+            <DatePicker Format="D" x:Name="date"
+            VerticalOptions="CenterAndExpand" PropertyChanged="Date_PropertyChanged"/>
+            <TimePicker x:Name="time"
+            VerticalOptions="CenterAndExpand" PropertyChanged="Time_PropertyChanged"/>
+
+            <StackLayout Orientation="Horizontal" Margin="30" Padding="20">
+            <Button
+        Text="Save"
+        Font="Medium"
+        BorderWidth="1"
+        HorizontalOptions="Start"
+        VerticalOptions="Start"
+        Clicked="OnSaveButtonClicked" />
+
+            <Button
+        Text="Delete"
+        Font="Medium"
+        BorderWidth="1"
+        HorizontalOptions="End"
+        VerticalOptions="End"
+        Clicked="OnDeleteButtonClicked" />
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
