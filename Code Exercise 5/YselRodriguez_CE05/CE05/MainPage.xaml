@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CE05.MainPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Grid">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal" />
+                        <VisualState x:Name="Selected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor"
+                                        Value="LightSkyBlue" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="CE05" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <StackLayout Orientation="Horizontal" Margin="30" Padding="20">
+            <Image Source="add.png">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                Tapped="OnAddImageTapped"
+                NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image x:Name="deleteImage" Source="delete.png" HorizontalOptions="End">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer
+                Tapped="OnDeleteImageTapped"
+                NumberOfTapsRequired="1" />
+                </Image.GestureRecognizers>
+            </Image>
+        </StackLayout>
+
+        <CollectionView x:Name="collectionView" SelectionMode="Multiple">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid RowDefinitions="Auto,Auto,Auto" BackgroundColor="LightBlue">
+                        <Image Grid.Row="0" Source="profile.png" HorizontalOptions="Start"/>
+                        <Label Grid.Row="1" Text="{Binding name}"/>
+                        <Label Grid.Row="2" Text="{Binding phone}"/>
+                        <Label Grid.Row="3" Text="{Binding email}"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CE05.InputPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Enter contact data"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+
+            <Entry x:Name="name" Keyboard="Text"
+       Placeholder="Contact name"
+       VerticalOptions="CenterAndExpand"/>
+
+            <Entry x:Name="phone" Keyboard="Telephone"
+       Placeholder="Contact phone"
+       VerticalOptions="CenterAndExpand"/>
+
+            <Entry x:Name="email" Keyboard="Email"
+       Placeholder="Contact email"
+       VerticalOptions="CenterAndExpand"/>
+
+            <Button
+        Text="Save to Contacts"
+        Font="Medium"
+        BorderWidth="1"
+        HorizontalOptions="Center"
+        VerticalOptions="Fill"
+        Clicked="OnSaveButtonClicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
