@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CE08.Settings">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+                <StackLayout Orientation="Vertical" Margin="30" Padding="20" Grid.Column="0">
+                    <Image Source="aapl.png" WidthRequest="100"></Image>
+                    <Button x:Name="apple"
+        Text="APPLE"
+        Font="Medium"
+        BorderWidth="1"
+        Margin="0"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="Start" />
+                </StackLayout>
+
+            <StackLayout Orientation="Vertical" Margin="30" Padding="20" Grid.Column="1">
+                <Image Source="fb.png" WidthRequest="100"></Image>
+                <Button x:Name="facebook"
+        Text="FACEBOOK"
+        Font="Medium"
+        BorderWidth="1"
+        Margin="0"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="Start"/>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Vertical" Margin="30" Padding="20" Grid.Column="0" Grid.Row="1">
+                <Image Source="amzn.png" WidthRequest="100"></Image>
+                <Button x:Name="amazon"
+        Text="AMAZON"
+        Font="Medium"
+        BorderWidth="1"
+        Margin="0"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="Start"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Margin="30" Padding="20" Grid.Column="1" Grid.Row="1">
+                <Image Source="googl.png" WidthRequest="100"></Image>
+                <Button x:Name="google"
+        Text="ALPHABET"
+        Font="Medium"
+        BorderWidth="1"
+        Margin="0"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="Start"/>
+            </StackLayout>
+
+
+            <StackLayout Orientation="Vertical" Margin="30" Padding="20" Grid.Column="0" Grid.Row="2">
+                <Image Source="nflx.png" WidthRequest="100"></Image>
+                <Button x:Name="netflix"
+        Text="NETFLIX"
+        Font="Medium"
+        BorderWidth="1"
+        Margin="0"
+        HorizontalOptions="CenterAndExpand"
+        VerticalOptions="Start"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" Margin="30" Padding="20" Grid.Column="1" Grid.Row="2">
+                <Image Source="t.png" WidthRequest="100"></Image>
+                <Button x:Name="att"
+        Text="AT&amp;T"
+        Font="Medium"
+        BorderWidth="1"
+        Margin="0"
+        HorizontalOptions="FillAndExpand"
+        VerticalOptions="Start"
+        />
+            </StackLayout>
+
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

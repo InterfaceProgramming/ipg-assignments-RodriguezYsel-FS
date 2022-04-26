@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CE08.History">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ListView x:Name="imageListView">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Symbol}" Detail="{Binding Date}" ImageSource="{Binding Image}"></ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            
+            <Button x:Name="clear"
+        Text="CLEAR HISTORY"
+        Font="Medium"
+        BorderWidth="1"
+        Margin="10"
+        HorizontalOptions="Fill"
+        VerticalOptions="Start"
+        Clicked="Clear_Button_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

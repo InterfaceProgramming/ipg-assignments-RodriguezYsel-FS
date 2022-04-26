@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CE07.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="CE07" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+        </Frame>
+
+        <StackLayout Orientation="Horizontal" Margin="30" Padding="20">
+            <Image x:Name="image" WidthRequest="50"></Image>
+            <Label x:Name="symbol" FontSize="Title" Padding="30,10,30,10"/>
+        </StackLayout>
+
+        <Label x:Name="open" FontSize="Medium" Padding="10,10,30,10"/>
+        <Label x:Name="close" FontSize="Medium" Padding="10,10,30,10"/>
+        <Label x:Name="high" FontSize="Medium" Padding="10,10,30,10"/>
+        <Label x:Name="low" FontSize="Medium" Padding="10,10,30,10"/>
+        <Label x:Name="volume" FontSize="Medium" Padding="10,10,30,10"/>
+        <Label x:Name="exchange" FontSize="Medium" Padding="10,10,30,10"/>
+        <Label x:Name="date" FontSize="Medium" Padding="10,10,30,10"/>
+
+        <Button
+        Text="GET STOCKS"
+        Font="Medium"
+        BorderWidth="1"
+        Margin="10"
+        HorizontalOptions="Fill"
+        VerticalOptions="Start"
+        Clicked="Get_Button_Clicked" />
+
+        <StackLayout Orientation="Horizontal" Margin="10" Padding="10">
+            <Button
+                x:Name="previous"
+        Text="PREVIOUS"
+        Font="Medium"
+        BorderWidth="1"
+        HorizontalOptions="StartAndExpand"
+        VerticalOptions="Start"
+        Clicked="Previous_Button_Clicked" />
+
+            <Button
+                x:Name="next"
+        Text="NEXT"
+        Font="Medium"
+        BorderWidth="1"
+        HorizontalOptions="End"
+        VerticalOptions="End"
+        Clicked="Next_Button_Clicked" />
+        </StackLayout>
+        
+    </StackLayout>
+
+</ContentPage>

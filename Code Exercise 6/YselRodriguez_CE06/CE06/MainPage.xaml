@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CE06.MainPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolbar" Text=""
+                 Order="Primary"
+                 Priority="0"
+                    Clicked="toolbar_Clicked"/>
+    </ContentPage.ToolbarItems>
+    
+    <StackLayout>
+        
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="CE06" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            
+        </Frame>
+
+        <CarouselView
+            x:Name="carouselView"
+            AbsoluteLayout.LayoutBounds="0,0,1,1"
+            AbsoluteLayout.LayoutFlags="All"
+            IndicatorView="indicatorView"
+            PeekAreaInsets="70"
+            CurrentItemChanged="OnCurrentItemChanged"
+            Loop="False">
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <AbsoluteLayout>
+                        <StackLayout
+                            AbsoluteLayout.LayoutBounds=
+                            "0.5,0.3,AutoSize,AutoSize"
+                            AbsoluteLayout.LayoutFlags=
+                            "PositionProportional"
+                            HorizontalOptions="Center">
+                            <Label
+                                FontSize="Title"
+                                HorizontalOptions="Center"
+                                HorizontalTextAlignment="Center"
+                                Text="{Binding Name}"
+                                VerticalOptions="Center" />
+
+                            <Image Source="{Binding Image}"/>
+                            
+                        </StackLayout>
+                    </AbsoluteLayout>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+
+        <IndicatorView
+            x:Name="indicatorView"
+            AbsoluteLayout.LayoutBounds="0.5,0.95,100,100"
+            AbsoluteLayout.LayoutFlags="PositionProportional"
+            IndicatorColor="LightGray"
+            IndicatorSize="10"
+            SelectedIndicatorColor="Black" />
+
+    </StackLayout>
+
+</ContentPage>
