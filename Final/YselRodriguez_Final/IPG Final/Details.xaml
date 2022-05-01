@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IPG_Final.Details">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" Margin="30" Padding="20">
+                <Image x:Name="image" WidthRequest="50"></Image>
+                <Label x:Name="symbol" FontSize="Title" Padding="30,10,30,10"/>
+            </StackLayout>
+
+            <Label x:Name="open" FontSize="Medium" Padding="10,10,30,10"/>
+            <Label x:Name="close" FontSize="Medium" Padding="10,10,30,10"/>
+            <Label x:Name="high" FontSize="Medium" Padding="10,10,30,10"/>
+            <Label x:Name="low" FontSize="Medium" Padding="10,10,30,10"/>
+            <Label x:Name="volume" FontSize="Medium" Padding="10,10,30,10"/>
+            <Label x:Name="exchange" FontSize="Medium" Padding="10,10,30,10"/>
+            <Label x:Name="date" FontSize="Medium" Padding="10,10,30,10"/>
+
+            <Button x:Name="CloseButton"
+        Text="Close"
+        Font="Medium"
+        BorderWidth="1"
+        Margin="10"
+        HorizontalOptions="Fill"
+        VerticalOptions="Start"
+        Clicked="Close_Button_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

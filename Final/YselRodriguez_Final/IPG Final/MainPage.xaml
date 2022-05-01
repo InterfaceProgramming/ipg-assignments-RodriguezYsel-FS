@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:layouts="clr-namespace:IPG_Final"
+            x:Class="IPG_Final.MainPage"
+            >
+
+    <NavigationPage Title="Favorites" IconImageSource="favorite.png">
+        <x:Arguments>
+            <layouts:Favorites Icon="favorite.png"/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="History" IconImageSource="history.png">
+        <x:Arguments>
+            <layouts:History Icon="history.png"/>
+        </x:Arguments>
+    </NavigationPage>
+
+    <NavigationPage Title="Settings" IconImageSource="settings.png">
+        <x:Arguments>
+            <layouts:Settings Icon="settings.png"/>
+        </x:Arguments>
+    </NavigationPage>
+
+</TabbedPage>
+
+

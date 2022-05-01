@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IPG_Final.HistoricalView">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Historical search" FontSize="Title" Padding="30,10,30,10"/>
+
+            <CarouselView x:Name="carouselView">
+                <CarouselView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <StackLayout Orientation="Horizontal" Margin="10" Padding="10">
+                                <Image x:Name="image" Source="{Binding Image}" WidthRequest="50"></Image>
+                                <Label x:Name="symbol" Text="{Binding Symbol}" FontSize="Title" Padding="10,10,10,10"/>
+                            </StackLayout>
+
+                            <Label x:Name="date" Text="{Binding Date, StringFormat='Trading Day: {0:C}'}" FontSize="Medium" Padding="10,10,10,10"/>
+                            <Label x:Name="open" Text="{Binding Open, StringFormat='Opening Price: ${0:C}'}" FontSize="Medium" Padding="10,10,10,10"/>
+                            <Label x:Name="close" Text="{Binding Close, StringFormat='Closing Price: ${0:C}'}" FontSize="Medium" Padding="10,10,10,10"/>
+                            <Label x:Name="high" Text="{Binding High, StringFormat='High Price: ${0:C}'}" FontSize="Medium" Padding="10,10,10,10"/>
+                            <Label x:Name="low" Text="{Binding Low, StringFormat='Low Price: ${0:C}'}" FontSize="Medium" Padding="10,10,10,10"/>
+                            <Label x:Name="volume" Text="{Binding Volume, StringFormat='Trading Volume: {0:C}'}" FontSize="Medium" Padding="10,10,10,10"/>
+                            <Label x:Name="exchange" Text="{Binding Exchange, StringFormat='Opening Price: {0:C}'}" FontSize="Medium" Padding="10,10,10,10"/>
+
+                        </StackLayout>
+                    </DataTemplate>
+                </CarouselView.ItemTemplate>
+            </CarouselView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

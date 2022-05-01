@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IPG_Final.Favorites"
+             >
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="noFavorites" Text="There are no favorites currently saved! Go to the settings page to add some" FontSize="Title" Padding="30,10,30,10"/>
+
+            <ListView x:Name="imageListView" ItemTapped="imageList_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Symbol}" Detail="{Binding Close, StringFormat='Last Closing Price: ${0:C}'}" ImageSource="{Binding Image}"></ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

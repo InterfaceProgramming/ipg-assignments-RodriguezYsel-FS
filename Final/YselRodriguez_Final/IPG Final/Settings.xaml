@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IPG_Final.Settings">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Current Favorite Stocks" FontSize="Title" Padding="30,10,30,10"/>
+
+            <ListView x:Name="favoriteStocksListView" ItemTapped="imageList_ItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ImageCell Text="{Binding Symbol}" ImageSource="{Binding Image}"></ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Entry x:Name="StockInput" Keyboard="Text"
+       Placeholder="Type stock symbol here to add new"
+       VerticalOptions="CenterAndExpand" />
+
+            <Button x:Name="AddFavoriteStockButton"
+        Text="Add New Favorite Stock"
+        Font="Medium"
+        BorderWidth="1"
+        Margin="10"
+        HorizontalOptions="Fill"
+        VerticalOptions="Start"
+        Clicked="Add_Favorite_Stock_Button_Clicked" />
+
+            <Label x:Name="status" HorizontalOptions="Center"/>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
